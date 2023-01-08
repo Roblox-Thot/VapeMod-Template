@@ -7,7 +7,7 @@ This is a template to make mods for [Vape]
   <blockquote>
     If you want docs please check <a href="https://github.com/7GrandDadPGN/VapeV4ForRoblox/wiki/Documentation">Vape's docs</a>!<br>
     If you want examples please check <a href="https://github.com/Roblox-Thot/VapeThotMod">Thot Mod</a>!<sub>(This has older code for mod support)</sub><br>
-    If you want to make more games just copy ... into a new file with the game ID you want!.
+    If you want to make more games just copy <a href="https://github.com/Roblox-Thot/VapeMod-Template/blob/main/CustomModules/6872274481.lua">Bedwar's code</a> into a new file with the game ID you want!.
   </blockquote>
 </details>
 
