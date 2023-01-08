@@ -2,8 +2,8 @@ repeat task.wait() until game:IsLoaded()
 
 ----------------------------------
 -- Config
-local gitUser = "Roblox-thot"
-local gitRepo = "VapeMod-Template"
+local shared.gitUser = "Roblox-thot"
+local shared.gitRepo = "VapeMod-Template"
 ----------------------------------
 
 local injected = true
