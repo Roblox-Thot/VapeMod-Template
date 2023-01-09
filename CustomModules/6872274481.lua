@@ -42,26 +42,27 @@ if publicrepo then
     --Bypasses/edits just know I won't update them!
 
     --[[
+	local regex,repin
 	-- disables and Vape Private user commands
-	local regex = 'local commands = {.*local AutoReport = {'
-	local repin =  "local commands = {} local AutoReport = {"
-	local publicrepo = string.gsub(tostring(publicrepo), regex,repin)
+	regex = 'local commands = {.*local AutoReport = {'
+	repin =  "local commands = {} local AutoReport = {"
+	publicrepo = string.gsub(tostring(publicrepo), regex,repin)
 	
 	-- attempts to give lplr admin (CLIENT SIDED)
-	local regex = 'WhitelistFunctions:CheckPlayerType%(lplr%) ~= "DEFAULT"'
-	local repin = "true"
-	local publicrepo = string.gsub(tostring(publicrepo), regex,repin)
-	local regex = 'WhitelistFunctions:CheckPlayerType%(lplr%)'
-	local repin = '"VAPE PRIVATE"'
-	local publicrepo = string.gsub(tostring(publicrepo), regex,repin)
+	regex = 'WhitelistFunctions:CheckPlayerType%(lplr%) ~= "DEFAULT"'
+	repin = "true"
+	publicrepo = string.gsub(tostring(publicrepo), regex,repin)
+	regex = 'WhitelistFunctions:CheckPlayerType%(lplr%)'
+	repin = '"VAPE PRIVATE"'
+	publicrepo = string.gsub(tostring(publicrepo), regex,repin)
 	
 	-- removes bedwarsdata kicks
-	local regex = 'newdatatab%.KickUsers%[tostring%(lplr%.UserId%)%]'
-	local repin = "false"
-	local publicrepo = string.gsub(tostring(publicrepo), regex,repin)
-	local regex = 'datatab%.KickUsers%[tostring%(lplr%.UserId%)%]'
-	local repin = "false"
-	local publicrepo = string.gsub(tostring(publicrepo), regex,repin)
+	regex = 'newdatatab%.KickUsers%[tostring%(lplr%.UserId%)%]'
+	repin = "false"
+	publicrepo = string.gsub(tostring(publicrepo), regex,repin)
+	regex = 'datatab%.KickUsers%[tostring%(lplr%.UserId%)%]'
+	repin = "false"
+	publicrepo = string.gsub(tostring(publicrepo), regex,repin)
     --]]--
 
     loadstring(publicrepo)()
