@@ -45,26 +45,26 @@ if publicrepo then
 	-- disables and Vape Private user commands
 	local regex = 'local commands = {.*local AutoReport = {'
 	local repin =  "local commands = {} local AutoReport = {"
-	local clean = string.gsub(tostring(publicrepo), regex,repin)
+	local publicrepo = string.gsub(tostring(publicrepo), regex,repin)
 	
 	-- attempts to give lplr admin (CLIENT SIDED)
-	local Aregex = 'WhitelistFunctions:CheckPlayerType%(lplr%) ~= "DEFAULT"'
-	local Arepin = "true"
-	local admind = string.gsub(tostring(clean), Aregex,Arepin)
-	local Aregex = 'priolist%[WhitelistFunctions:CheckPlayerType%(lplr%)%] > 0'
-	local Arepin = "true"
-	local admind = string.gsub(tostring(admind), Aregex,Arepin)
+	local regex = 'WhitelistFunctions:CheckPlayerType%(lplr%) ~= "DEFAULT"'
+	local repin = "true"
+	local publicrepo = string.gsub(tostring(publicrepo), regex,repin)
+	local regex = 'WhitelistFunctions:CheckPlayerType%(lplr%)'
+	local repin = '"VAPE PRIVATE"'
+	local publicrepo = string.gsub(tostring(publicrepo), regex,repin)
 	
 	-- removes bedwarsdata kicks
-	local Kregex = 'newdatatab%.KickUsers%[tostring%(lplr%.UserId%)%]'
-	local Krepin = "false"
-	local Fclean = string.gsub(tostring(admind), Kregex,Krepin)
-	local Kregex = 'datatab%.KickUsers%[tostring%(lplr%.UserId%)%]'
-	local Krepin = "false"
-	local Fclean = string.gsub(tostring(Fclean), Kregex,Krepin)
+	local regex = 'newdatatab%.KickUsers%[tostring%(lplr%.UserId%)%]'
+	local repin = "false"
+	local publicrepo = string.gsub(tostring(publicrepo), regex,repin)
+	local regex = 'datatab%.KickUsers%[tostring%(lplr%.UserId%)%]'
+	local repin = "false"
+	local publicrepo = string.gsub(tostring(publicrepo), regex,repin)
     --]]--
 
-    loadstring(Fclean)()
+    loadstring(publicrepo)()
 end
 
 GuiLibrary["SelfDestructEvent"].Event:Connect(function()
