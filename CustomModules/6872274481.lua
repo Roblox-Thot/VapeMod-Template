@@ -38,33 +38,6 @@ checkpublicrepo = function()
 end
 local publicrepo = checkpublicrepo()
 if publicrepo then
-    --Feel free to remove line 44 to use my
-    --Bypasses/edits just know I won't update them!
-
-    --[[
-	local regex,repin
-	-- disables and Vape Private user commands
-	regex = 'local commands = {.*local AutoReport = {'
-	repin =  "local commands = {} local AutoReport = {"
-	publicrepo = string.gsub(tostring(publicrepo), regex,repin)
-	
-	-- attempts to give lplr admin (CLIENT SIDED)
-	regex = 'WhitelistFunctions:CheckPlayerType%(lplr%) ~= "DEFAULT"'
-	repin = "true"
-	publicrepo = string.gsub(tostring(publicrepo), regex,repin)
-	regex = 'WhitelistFunctions:CheckPlayerType%(lplr%)'
-	repin = '"VAPE PRIVATE"'
-	publicrepo = string.gsub(tostring(publicrepo), regex,repin)
-	
-	-- removes bedwarsdata kicks
-	regex = 'newdatatab%.KickUsers%[tostring%(lplr%.UserId%)%]'
-	repin = "false"
-	publicrepo = string.gsub(tostring(publicrepo), regex,repin)
-	regex = 'datatab%.KickUsers%[tostring%(lplr%.UserId%)%]'
-	repin = "false"
-	publicrepo = string.gsub(tostring(publicrepo), regex,repin)
-    --]]--
-
     loadstring(publicrepo)()
 end
 
