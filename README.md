@@ -1,6 +1,8 @@
 # Hello!
 This is a template to make mods for [Vape]
 
+Might be broken. If so let me know lol
+
 <h1>Faq</h1>
 <details>
   <summary>How do I make stuff? Make a documation plz!</summary>
